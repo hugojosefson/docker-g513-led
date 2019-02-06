@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+
+color=${1:-66aa44}
+
+docker run --init --device=/dev/hidraw{0,1,2,3,4,5,6} --rm -it hugojosefson/g513-led -fx color all ${color}
