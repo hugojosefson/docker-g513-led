@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+## TODO: Create a proper profile file :)
+
+set -e
+
+green=66aa44
+blueish=aaaaaa
+weak_green=004400
+
+./set-all ${green}
+
+function setBlueish() {
+  local key="${1}"
+  ./set-key "${key}" "${blueish}"
+}
+
+function setWeakGreen() {
+  local key="${1}"
+  ./set-key "${key}" "${weak_green}"
+}
+
+
+setBlueish tilde
+setBlueish f2
+setBlueish 4
+setBlueish 9
+setBlueish 0
+setBlueish '['
+setBlueish ']'
+setBlueish dollar # actually backslash
+setWeakGreen quote
+setWeakGreen ';'
+setBlueish slash
