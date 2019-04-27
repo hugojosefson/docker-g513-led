@@ -5,4 +5,4 @@ set -e
 color=${1:-66aa44}
 hidraw_args=$(for i in /dev/hidraw*; do echo -n "--device=${i} "; done;)
 
-docker run --init ${hidraw_args} --rm -it hugojosefson/g513-led -fx color all ${color}
+docker run --init ${hidraw_args} --rm -i hugojosefson/g513-led -fx color all ${color}
