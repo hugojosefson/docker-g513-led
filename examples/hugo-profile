@@ -8,6 +8,8 @@ green=66aa44
 blueish=aaaaaa
 weak_green=004400
 
+cd "$(dirname $0)"
+
 ./set-all ${green}
 
 function setBlueish() {
