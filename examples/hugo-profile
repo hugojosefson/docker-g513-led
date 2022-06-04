@@ -33,4 +33,5 @@ setBlueish ']'
 setBlueish dollar # actually backslash
 setWeakGreen quote
 setWeakGreen ';'
+setWeakGreen 3
 setBlueish slash
