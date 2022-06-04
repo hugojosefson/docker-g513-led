@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail; IFS=$'\t\n'
 
 hidraw_args=$(for i in /dev/hidraw*; do echo -n "--device=${i} "; done;)
 
-docker run --init ${hidraw_args} --rm -i hugojosefson/g513-led -k "$@"
+exec docker run --init ${hidraw_args} --rm -i docker.io/hugojosefson/g513-led -k "$@"

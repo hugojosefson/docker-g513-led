@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail; IFS=$'\t\n'
 
-docker build --tag hugojosefson/g513-led .
+exec docker build --tag docker.io/hugojosefson/g513-led .

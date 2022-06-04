@@ -1,8 +1,8 @@
 FROM debian:unstable
-MAINTAINER Hugo Josefson <hugo@josefson.org> (https://www.hugojosefson.com/)
+LABEL MAINTAINER "Hugo Josefson <hugo@josefson.org> (https://www.hugojosefson.com/)"
 
 RUN apt-get update \
- && apt-get install -y g810-led \
- && apt-get clean
+    && apt-get install -y g810-led \
+    && apt-get clean
 
 ENTRYPOINT ["/usr/bin/g513-led"]
